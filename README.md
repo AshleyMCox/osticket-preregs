@@ -31,10 +31,15 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img width="341" alt="Screenshot 2024-09-25 103803" src="https://github.com/user-attachments/assets/392efcbb-615b-45f2-9083-7514cfaae9cc">
+    Install / Enable IIS in Windows WITH CGI. From the “osTicket-Installation-Files” folder Install PHP Manager for IIS, Install the Rewrite Module, unzip PHP into the “C:\PHP” folder. Install MySQL. We will use the files in this folder to install osTicket and install all of it's dependencies.
+
+
+
 </p>
 <br />
 
