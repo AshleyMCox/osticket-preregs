@@ -25,7 +25,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Enable Internet Information Services
 - Install Web Platform Installer
 - Install My Sequel/Set-up Username and Password
-- Install C++ Resdistributuable
+- Install C++ Resdistributable
 - Configure Permissions and Install OS Ticket
 
 <h2>Installation Steps</h2>
