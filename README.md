@@ -37,7 +37,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <p>
 
 
-Step 1: Connect to Your Virtual Machine with Remote Desktop          
+Step 1: We can do a quick search for Virtual Machine and as we create the virtual machine, we will have the option to create the Resource Group. Here we select Create New to name the name the Resource Group 'RG-osTicket' and build out the Virtual Machine (VM)
+
+        
 
 </p>
 <br />
