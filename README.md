@@ -63,8 +63,10 @@ Once browse: 80 is selected a browser window will open presenting osTicket insta
 Next we'll go back to IIS, sites -> Default -> 1. osTicket 2. Double-click PHP Manager 3. Click Enable or disable an extension 1. Enable: php_imap.dll 2. Enable: php_intl.dll 3. Enable: php_opcache.dll -
 ![image](https://github.com/user-attachments/assets/6ca0e641-3619-427e-add8-45d7860839a3)
 ![68747470733a2f2f692e696d6775722e636f6d2f634d74437561412e706e67](https://github.com/user-attachments/assets/53ab4d75-6ce3-4850-a225-5917db48824e)
+
 Refresh the osTicket site in your browser to see what has changed after enabling the PHP extensions
 ![68747470733a2f2f692e696d6775722e636f6d2f50504e7a6956352e706e67](https://github.com/user-attachments/assets/89282569-b170-49e3-b8ae-aa038a40872d)
+
 Rename: From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php ---> To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
 ![68747470733a2f2f692e696d6775722e636f6d2f753062437244432e706e67](https://github.com/user-attachments/assets/9774c825-93ae-4a75-8034-62b7473364fd)
 
@@ -72,9 +74,43 @@ Assign Permissions: ost-config.php To change the permissions, right-click ost-co
 ![68747470733a2f2f692e696d6775722e636f6d2f4473384a5576742e706e67](https://github.com/user-attachments/assets/f2776df5-65c6-4c75-b067-6574044a60dc)
 ![68747470733a2f2f692e696d6775722e636f6d2f724b6863486b572e706e67](https://github.com/user-attachments/assets/2f9384a2-755c-4da0-acac-53341c3a87c5)
 ![68747470733a2f2f692e696d6775722e636f6d2f78616a6a50474b2e706e67](https://github.com/user-attachments/assets/30669ad2-4467-450b-aa00-d2112035906f)
+
 Then add new permissions for everyone and give Full Control.
 ![68747470733a2f2f692e696d6775722e636f6d2f513958514c586d2e706e67](https://github.com/user-attachments/assets/a16e1650-6c65-4ea9-96aa-0484f56dfe94)
 
+After returning to the browser windows with osTicket installer and press 'Continue', you will now see the below form to complete before continuing.
+![68747470733a2f2f692e696d6775722e636f6d2f666a4b4167476b2e706e67](https://github.com/user-attachments/assets/50d08c15-2fd7-49bc-b5c2-1cb9665082ed)
+
+Download and install HeidiSQL from Google Drive using the provided defaults that are available in the install wizard.
+![68747470733a2f2f692e696d6775722e636f6d2f6f496d773577302e706e67](https://github.com/user-attachments/assets/acf4093b-92fc-4193-a218-ebb957bc5c28)
+
+Next we will do the following in HeidiSql:
+Create a new session, username:root/password:Password1
+Connect to the session
+Create a database called “osTicket”
+![68747470733a2f2f692e696d6775722e636f6d2f443251664d45622e706e67](https://github.com/user-attachments/assets/4e1af0ac-4bc7-476b-afd3-16741ea00343)
+![68747470733a2f2f692e696d6775722e636f6d2f33624d4850324b2e706e67](https://github.com/user-attachments/assets/3c5b650e-0e72-41b3-99e8-49355d3fa593)
+After the database is created, we can now enter those details into osTicket Installer
+
+MySQL Username: root
+MySQL Password: Password1
+Click “Install Now!”
+![68747470733a2f2f692e696d6775722e636f6d2f563347537676542e706e67](https://github.com/user-attachments/assets/6e08ddf8-4f40-45eb-afc8-9a6e4f772cfd)
+Results below are from of choosing for "Your Staff Control Panel" or "Your osTicket URL:"
+![68747470733a2f2f692e696d6775722e636f6d2f4c6854674939322e706e67](https://github.com/user-attachments/assets/82c20c6b-1fe6-48f3-be6e-7bd3ab91434e)
+![68747470733a2f2f692e696d6775722e636f6d2f6a4e6b505a4e432e6a7067](https://github.com/user-attachments/assets/dfd48d1a-f6fc-4f05-aeac-4c4b7200fe62)
+"Your osTicket URL" will direct us to the "End User" Portal where Users can submit tickets for assistance from the help desk.
+![68747470733a2f2f692e696d6775722e636f6d2f457276624367362e706e67](https://github.com/user-attachments/assets/af2af845-9a66-4a11-8639-b204c081291b)
+
+Clean up
+
+Delete: C:\inetpub\wwwroot\osTicket\setup
+Set Permissions to “Read” only: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+Login to the osTicket Admin Panel ([http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php))
+![68747470733a2f2f692e696d6775722e636f6d2f5847487a336c782e706e67](https://github.com/user-attachments/assets/1621b4df-a25f-46f4-bd64-5e0e7b4bfb44)
+Set Permission to "Read" only can be acheived by choosing to right-click on 'ost-config.php' --> select properties --> select the 'Security' tab near the top --> then click the 'Advanced' button (not pictured below) --> once advanced settings is selected, you can now select the 'Everyone' principle and now we can select to choose 'Read' only as the preferred permission(s)
+![68747470733a2f2f692e696d6775722e636f6d2f4158434965514e2e706e67](https://github.com/user-attachments/assets/e7294df0-e354-48a2-9ba7-2089ffeb9af0)
+![68747470733a2f2f692e696d6775722e636f6d2f52313172494d642e706e67](https://github.com/user-attachments/assets/02f4bdce-428f-44df-a940-49fc1bc998bf)
 
 
 
@@ -89,23 +125,3 @@ Then add new permissions for everyone and give Full Control.
 
 
 
-
-
-
-
-
-
-
-</p>
-<p>
-.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
